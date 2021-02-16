@@ -6,6 +6,8 @@
 
 ## 目录
 
+- [JavaScript](docs/javascript.md)
+
 - [CSS动画](docs/css-animation.md)
 
 - [其他](docs/other.md)
