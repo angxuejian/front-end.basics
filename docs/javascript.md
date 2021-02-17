@@ -384,7 +384,6 @@
   }
 
   // 子类
-
   class Son extends Father {
     constructor() {
       super() // 必须调用、否则调用this会报错
