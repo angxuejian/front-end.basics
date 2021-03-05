@@ -14,3 +14,7 @@
 
 - [其他](docs/other.md)
 
+## 许可
+[MIT License](LICENSE)
+
+front-end.basics Copyright © 2021 angxuejian
