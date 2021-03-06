@@ -6,14 +6,14 @@
 
 ## 目录
 
-- [JavaScript](docs/javascript.md)
+分类 | 文档
+--- | ---
+JavaScript基础知识 | [ >>> ](docs/javascript.md)
+CSS样式 | [ >>> ](docs/css.md)
+CSS动画 | [ >>> ](docs/css-animation.md)
+前端小知识 | [ >>> ](docs/tips.md)
 
-- [CSS](docs/css.md)
-
-- [CSS动画](docs/css-animation.md)
-
-- [其他](docs/other.md)
-
+[全部组件 - 在这里！](LIST.md)
 ## 许可
 [MIT License](LICENSE)
 

@@ -399,6 +399,6 @@
 
   - ES6 与 ES5继承有什么区别？
 
-    - ES6: 创建父类、通过extends继承后、调用super 获取父类this、获取this后修改子类
+    1. ES6: 创建父类、通过extends继承后、调用super 获取父类this、获取this后修改子类
 
-    - ES5: 创建子类实例、通过prototype将父类原型属性赋值给子类实例
+    2. ES5: 创建子类实例、通过prototype将父类原型属性赋值给子类实例
