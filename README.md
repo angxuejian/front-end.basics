@@ -6,11 +6,13 @@
 
 ## 目录
 
+[示例看这里](index.html)
+
 分类 | 文档
 --- | ---
 CSS样式 | [ >>> ](docs/css.md)
 CSS动画 | [ >>> ](docs/css-animation.md)
-前端小知识 | [ >>> ](docs/tips.md)
+其他小知识 | [ >>> ](docs/tips.md)
 JavaScript小知识 | [ >>> ](docs/javascript.md)
 
 
