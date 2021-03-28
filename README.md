@@ -8,12 +8,12 @@
 
 [示例看这里](index.html)
 
-分类 | 文档
---- | ---
-CSS样式 | [ >>> ](docs/css.md)
-CSS动画 | [ >>> ](docs/css-animation.md)
-其他小知识 | [ >>> ](docs/tips.md)
-JavaScript小知识 | [ >>> ](docs/javascript.md)
+分类 | 文档 | 示例
+--- | ---  | ---
+CSS样式 | [ >>> ](docs/css.md) | [ css.html ](html/css.html)
+CSS动画 | [ >>> ](docs/css-animation.md) |
+其他小知识 | [ >>> ](docs/tips.md) |
+JavaScript小知识 | [ >>> ](docs/javascript.md) |
 
 
 ## 许可
