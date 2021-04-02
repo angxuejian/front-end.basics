@@ -64,3 +64,52 @@
 
 // tip: 将div设置为长方形、只显示 右边框 + 下边框、旋转45度即可。
 ```
+
+## 指定弧度的圆弧
+```
+// index.html
+<div>
+  <div class="arc"></div>
+  <div class="circle"></div>
+</div>
+
+
+// index.css
+.circle {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #666;
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.arc {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  clip: rect(0 200px 200px 100px);
+  animation: myarc 3s linear infinite;
+}
+.arc::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  clip: rect(0 100px 200px 0);
+  background-color: #666;
+  transform: rotate(30deg);
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid red;
+}
+@keyframes myarc {
+  from { transform: rotateZ(0);}
+  to   { transform: rotateZ(360deg);}
+}
+
+/* tips:
+* 将圆看成正方形。分别裁剪一左一右的长方形、旋转左边长方形 指定角度即可
+* 将 400*400的正方形 裁剪为 200*200的长方形。实际宽高还是400*400，只是显示200*200的宽高。
+* 主要是利用这点来实现的！可能说的比较模糊...  快去动手试一试、一试便知！
+**/
+```

@@ -15,6 +15,7 @@
       flex-direction: column;
     }
 
+/* 1、---------------- */
     .only {
       /* 必须设置宽度！ */
       width: 150px;
@@ -28,7 +29,7 @@
       overflow: hidden;
     }
 
-
+/* 2、---------------- */
     .more {
       width: 150px;
       height: 45px;  /* 设置 高度 必须要于 2 行高度相等 */
@@ -41,7 +42,7 @@
       overflow: hidden;
     }
 
-
+/* 3、---------------- */
     .check {
       width: 10px;
       height: 22px;
@@ -50,6 +51,39 @@
       border-color: #16C60C;
       transform: rotate(45deg);
     }
+
+/* 4、---------------- */
+    .circle {
+      width: 200px;
+      height: 200px;
+      border: 3px solid #666;
+      background-color: blanchedalmond;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    .arc {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      clip: rect(0 200px 200px 100px);
+      animation: myarc 3s linear infinite;
+    }
+    .arc::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      clip: rect(0 100px 200px 0);
+      background-color: #666;
+      transform: rotate(30deg);
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 3px solid red;
+    }
+    @keyframes myarc {
+      from { transform: rotateZ(0);}
+      to   { transform: rotateZ(360deg);}
+    }
   </style>
 </head>
 
@@ -57,10 +91,19 @@
 
   <div class='only'>单行超出文本显示省略号</div>
   <br>
+
   <div class='more'>多行超出文本显示省略号、多行超出文本显示省略号</div>
   <br>
+
   <div class="check"></div>
   <br>
+
+  <div>
+    <div class="arc"></div>
+    <div class="circle"></div>
+  </div>
+  <br>
+  
 </body>
 
 </html>
