@@ -10,7 +10,7 @@
 
 分类 | 文档 | 示例
 --- | ---  | ---
-CSS样式 | [ >>> ](docs/css.md) | [ css.html ](html/css.html)
+CSS样式 | [ >>> ](docs/css.md) | [ css.html ](https://angxuejian.github.io/front-end.basics/css.html)
 CSS动画 | [ >>> ](docs/css-animation.md) |
 其他小知识 | [ >>> ](docs/tips.md) |
 JavaScript小知识 | [ >>> ](docs/javascript.md) |
