@@ -84,7 +84,8 @@ console.log(num === 9) // true
     优点：效率要高一点、直接渲染
 
 
-## h5键盘问题？
+## <span id='h5-key'>h5键盘问题？</span>
+
 1、键盘顶起后 背景图片高度发生变化问题？
 
 在 onload 触发后，获取当前window的高度、动态将高度赋值给根组件body
@@ -109,3 +110,36 @@ console.log(num === 9) // true
  - android机型监听 窗口大小事件， ios机型无法监听窗口大小事件
   
 > 触发事件时可以将button按钮 隐藏或显示
+
+<br>
+
+[查看h5键盘示例](https://angxuejian.github.io/works/keyboard-height/)
+
+## h5 canvas画图
+
+1、清晰度问题
+
+**获取设备像素点 / canvas像素的 = 缩放比例**
+
+**canvas的宽高 * 缩放比例 = 放大后的canvas画布**，清晰度就会上去
+
+提示：先将canvas画成功后，在将宽高 * 缩放比例，要不然绘制位置时，都是放大过的，尺寸位置都是错的。
+
+2、图片跨域问题
+
+将 绘制代码放在 服务端就不存在跨域问题了。
+
+[如何在前端开启本地服务端](https://github.com/angxuejian/http-cros-proxy-template)
+
+
+3、键盘顶起、canvas画图比例错误
+
+键盘问题可以先看看[h5键盘问题？](#h5-key)
+
+主要问题是 键盘顶起页面，绘制时获取的当前被键盘顶起来的高度，并不是屏幕本身高度
+
+可以在 onload后将页面高度 保存下来、绘制时使用保存的高度，而不是实时获取的高度
+
+<br>
+
+[查看h5 canvas画图示例](https://angxuejian.github.io/works/canvas-poster/)
