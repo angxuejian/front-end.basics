@@ -143,3 +143,14 @@ console.log(num === 9) // true
 <br>
 
 [查看h5 canvas画图示例](https://angxuejian.github.io/works/canvas-poster/)
+
+
+## h5调用移动端 拍摄 + 相册
+
+点击会调用手机系统弹窗、选择拍摄或相册
+```
+<input type="file" accept="image/*">
+```
+
+change事件：ios + android 都支持
+input事件：ios部分机型不支持
