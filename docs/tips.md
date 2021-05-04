@@ -154,3 +154,40 @@ console.log(num === 9) // true
 
 change事件：ios + android 都支持
 input事件：ios部分机型不支持
+
+## H5适应横屏 和 竖屏	
+
+1、竖屏
+
+正常开发即可、没什么可讲的；[示例](https://angxuejian.github.io/works/canvas-poster/public/)
+
+2、横屏
+
+横屏又可以分为`自动旋转横屏` 和 `竖屏状态下横屏`。前者是用户自动将屏幕横过来，后者是通过旋转根节点横屏。
+
+> 缺点：
+>> 自动旋转横屏：需要用户主动横屏<br><br>
+>> 竖屏状态下横屏：此时用户开启横屏，页面将展示错乱，且输入法还是竖屏状态
+
+
+H5能力有限不能调用手机横屏，只能监听窗口大小改变。想要出现横屏输入法，必须是手机横屏状态
+
+权衡利弊之后还是选择使用后者`竖屏状态下横屏`
+
+解决思路大致可以这样：
+
+1. 一开始使用竖屏、通过旋转根节点实现横屏
+2. 监听 `resize` 屏幕改变成横屏时、在将根节点恢复到为旋转之前
+
+```
+// 获取dom 节点的宽高
+
+document.documentElement.clientWidth
+document.documentElement.clientHeight
+```
+
+最后看这里 - [示例](https://angxuejian.github.io/works/horizontal-screen-animation/)
+
+
+
+
