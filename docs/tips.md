@@ -103,6 +103,7 @@ console.log(num === 9) // true
 
 和 示例1 思路一样，在onload触发后修改body的高度。
 
+
 4、底部有button按钮、键盘顶起button也被顶起
 
  - ios机型可以 监听 input的 焦点 和 失去焦点事件，android机型键盘下拉时不会触发失去焦点事件
@@ -153,6 +154,7 @@ console.log(num === 9) // true
 ```
 
 change事件：ios + android 都支持
+
 input事件：ios部分机型不支持
 
 ## H5适应横屏 和 竖屏	
