@@ -192,4 +192,53 @@ document.documentElement.clientHeight
 
 
 
+## 关于视频自动播放问题
+PC端
+```
+<video
+  // 设置后，音频会初始化为静音，注意浏览器只有设置静音，才能自动播放
+  muted
+
+  // 视频会马上自动开始播放，不会停下来等着数据载入结束。
+  autoplay="autoplay"
+
+  // 布尔属性；指定后，会在视频结尾的地方，自动返回视频开始的地方
+  loop="true"
+
+  // 一个布尔属性，标志视频将被“inline”播放，即在元素的播放区域内。
+  x5-playsinline="true"
+  playsinline="true"
+  webkit-playsinline="true"
+
+  // 一个布尔属性，用于禁用使用有线连接的设备(HDMI、DVI等)的远程播放功能。
+  x-webkit-airplay="allow"
+
+  // 这个视频优先加载
+  preload="auto"
+
+  // 启用同层H5播放器，就是在视频全屏的时候，div可以呈现在视频层上，也是WeChat安卓版特有的属性。同层播放别名也叫做沉浸式播放
+  x5-video-player-type="h5"
+
+  // :全屏设置。它又两个属性值，ture和false，true支持全屏播放
+  x5-video-player-fullscreen="true"
+
+  // 进度条控制
+  controls
+>
+<source src="indexMove.mp4" type="video/mp4">
+</video>
+```
+
+移动端
+
+安卓机型应该没什么问题、通过js可以播放视频，但是ios机型就不行了。可以考虑一下这个[序列图片实现视频播放效果](https://www.zhangxinxu.com/study/201805/image-sequence-frame-play.html)
+
+微信H5
+
+监听`WeixinJSBridgeReady`事件，在事件回调后就可以通过js播放视频
+
+如果需要在特定页面才播放视频，可以在监听视频的`play`事件，**播放后立马暂停**。因为已经播放过一次了，之后就可以通过js播放视频了。只限微信浏览器
+
+
+
 
