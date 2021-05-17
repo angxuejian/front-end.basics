@@ -230,15 +230,40 @@ PC端
 ```
 
 移动端
+```
+<video
+  playsinline='true'
+  preload='auto'
+  webkit-playsinline='true'
+  x-webkit-airplay="allow" 
+  x5-video-player-type="h5"  
+  x5-video-player-fullscreen="true" 
+  x5-video-orientation="portraint"
+  preload='auto'
+  style='object-fit: cover;'
+  controls
+>
+  <source  type="video/mp4" src="https://www.zgckarsa.top/b.mp4"></source>
+</video>
+```
 
-安卓机型应该没什么问题、通过js可以播放视频，但是ios机型就不行了。可以考虑一下这个[序列图片实现视频播放效果](https://www.zhangxinxu.com/study/201805/image-sequence-frame-play.html)
+安卓机型应该没什么问题、通过js可以播放视频，但是ios机型必须要点击后才可以播放(只要有交互，就可以用js播放)。
 
-微信H5
-
-监听`WeixinJSBridgeReady`事件，在事件回调后就可以通过js播放视频
+在微信H5中可以监听`WeixinJSBridgeReady`事件，在事件回调后就可以通过js播放视频
 
 如果需要在特定页面才播放视频，**可以在监听事件中先播放，然后暂停；** 因为已经播放过一次了，之后就可以通过js播放视频了。只限微信浏览器
 
+<br>
+<br>
 
+最后 - 视频播放进度(每次都从头播放)
+
+```
+video.addEventListener('pause', function() {
+  video.currentTime = 0
+})
+```
+
+> 也可以考虑一下这个[序列图片实现视频播放效果](https://www.zhangxinxu.com/study/201805/image-sequence-frame-play.html)
 
 
