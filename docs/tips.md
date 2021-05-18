@@ -265,3 +265,30 @@ video.addEventListener('pause', function() {
 > 也可以考虑一下这个[序列图片实现视频播放效果](https://www.zhangxinxu.com/study/201805/image-sequence-frame-play.html)
 
 
+## background - 点击态
+
+```
+// index.html
+
+<div id='back'></div>
+
+// index.css
+
+<!-- 背景图 必须是雪碧图 -->
+#back {
+   background: url('../img/new/back.png') no-repeat top/100% auto;
+}
+
+// index.js
+
+$('#back').on('touchstart', start)
+$('#back').on('touchend', end)
+
+function start() {
+  $(this).css('background-position-y', 'bottom')
+}
+function end() {
+  $(this).css('background-position-y', 'top')
+}
+
+```
