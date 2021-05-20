@@ -292,3 +292,19 @@ function end() {
 }
 
 ```
+
+## 小程序打开文档
+```
+wx.downloadFile({
+  url: url,
+  filePath: wx.env.USER_DATA_PATH + `/${name}.${type}`,
+  success: res => {
+    wx.hideLoading()
+    wx.openDocument({
+      showMenu:true,
+      filePath:res.filePath,
+      }
+    })
+  }
+})
+```
