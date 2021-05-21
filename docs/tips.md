@@ -308,3 +308,37 @@ wx.downloadFile({
   }
 })
 ```
+
+## CSS 隐藏滚动条
+
+```
+// index.html
+<div class="outer">
+  <div class="inner">
+    <div class="content"></div>
+  </div>
+</div>
+
+
+// index.css
+.outer {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.inner {
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.content {
+  width: 500px;
+  height: 484px; /* 要比 .outer 的height少一点*/
+  margin: 0;
+  padding: 0;
+}
+
+```
