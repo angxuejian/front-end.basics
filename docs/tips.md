@@ -342,3 +342,17 @@ wx.downloadFile({
 }
 
 ```
+
+## a 标签下载文件
+```
+const url = 'xxx.png'  // 线上地址 or 本地地址 都可以
+const name = '文件名称'
+const type = '.docx'   // 文件后缀
+
+const a = document.createElement('a')
+const blob = new Blob([url])
+a.href = URL.createObjectURL(blob)
+a.download = `${name}${type}`
+
+a.click()
+```
