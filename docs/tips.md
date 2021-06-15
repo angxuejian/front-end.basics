@@ -356,3 +356,14 @@ a.download = `${name}${type}`
 
 a.click()
 ```
+## 滚动条始终在底部
+```
+<!-- 获取最新的子节点的可视区域 -->
+document.getElementById('id').scrollIntoView()
+
+
+
+<!-- 将父元素的高度、赋值给滚动条高度 -->
+let div = document.getElementById('id')
+div.scrollTop = div.scrollHeight
+```

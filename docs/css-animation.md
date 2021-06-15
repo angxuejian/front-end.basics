@@ -167,3 +167,24 @@ translateY：为 上下方向、从上到下 0% - 100%
 ## 字幕效果
 
 [滑动](#slide) + [淡入](#fead)
+
+## 弹幕效果
+```
+.barrage {
+  animation: bar-scale 0.5s ease forwards;
+  opacity: 0;
+  transform-origin: bottom left;
+  transform: scale(0.1);
+}
+
+@keyframes bar-scale {
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+```
