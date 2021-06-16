@@ -358,12 +358,32 @@ a.click()
 ```
 ## 滚动条始终在底部
 ```
-<!-- 获取最新的子节点的可视区域 -->
+// 获取最新的子节点的可视区域
 document.getElementById('id').scrollIntoView()
 
-
-
-<!-- 将父元素的高度、赋值给滚动条高度 -->
+// 将父元素的高度、赋值给滚动条高度
 let div = document.getElementById('id')
 div.scrollTop = div.scrollHeight
+
+
+// 向上滑动滚动条时 停止滚动条在底部；滚动条回到底部时 继续始终在底部
+// 监听父元素的  scroll 事件
+div.addEventListener('scroll', function(event) {
+  const nowScrollHeight = div.scrollTop + event.target.clientHeight
+
+  if (nowScrollHeight === div.scrollHeight) {
+    console.log('滚动条在底部、保持滚动条在底部')
+  } else if (nowScrollHeight < div.scrollHeight) {
+    console.log('滚动条向上滚动、保持滚动条当前位置')
+  }  
+})
+
+/**
+ * div.scrollTop: 父元素的滚动的高度
+ * event.target.clientHeight：父元素的水平滚动条高度
+ * div.scrollHeight： 父元素的总共滚动高度
+ * 
+ * 当 (div.scrollTop + event.target.clientHeight) = div.scrollHeight时，证明当前滚动条在底部、反之不在底部
+*/
+
 ```
