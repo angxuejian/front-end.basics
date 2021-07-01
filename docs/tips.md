@@ -153,6 +153,16 @@ console.log(num === 9) // true
 <input type="file" accept="image/*">
 ```
 
+只调用手机拍摄
+```
+<input type="file" accept="image/*" capture="camera">
+```
+
+只调用手机相册
+```
+<input type="file" accept="image/png, image/jpg, image/jpeg">
+```
+
 change事件：ios + android 都支持
 
 input事件：ios部分机型不支持
