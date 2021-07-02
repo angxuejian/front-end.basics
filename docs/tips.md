@@ -148,10 +148,14 @@ console.log(num === 9) // true
 
 ## h5调用移动端 拍摄 + 相册
 
-点击会调用手机系统弹窗、选择拍摄或相册
+1、支持 ios + android 设备
+
+调用手机系统弹窗、选择拍摄或相册
 ```
 <input type="file" accept="image/*">
 ```
+
+2 支持 android 设备
 
 只调用手机拍摄
 ```
