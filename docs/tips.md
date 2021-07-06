@@ -11,8 +11,8 @@
 
 - jsonp
 - 后端开放 Access-Control-Allow-Origin 请求头
-- [nginx代理跨域](https://github.com/angxuejian/nodejs-http-proxy-template)
-- [nodejs代理跨越](https://github.com/angxuejian/nodejs-http-proxy-template)
+- [nginx代理跨域](https://github.com/angxuejian/http-cros-proxy-template/tree/nginx)
+- [nodejs代理跨越](https://github.com/angxuejian/http-cros-proxy-template/tree/express)
 
 
 ## 浏览器
