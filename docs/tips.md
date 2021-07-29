@@ -317,7 +317,6 @@ wx.downloadFile({
     wx.openDocument({
       showMenu:true,
       filePath:res.filePath,
-      }
     })
   }
 })
