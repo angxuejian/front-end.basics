@@ -16,7 +16,7 @@
   box-sizing: border-box;
 
   /* 要点 */
-  word-break:break-all
+  word-break:break-all;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
